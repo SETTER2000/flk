@@ -18,21 +18,29 @@ class Controller_Tasks extends Controller
 
     function action_add()
     {
+//        print_r($_POST);
+//        exit();
+
+        if (empty($_POST['user']) || empty($_POST['description'])) {
+            $this->view->generate('taskadd_view.php', 'template_view.php', 'Ошибка! Задача не добавлены.');
+            return;
+        }
+
         $file = $_FILES['pic'];
         $this->upload_file($file);
         $_POST['pic'] = $file['name'];
-        if (!empty($_POST) && $this->model->add_data($_POST)) {
+        if (isset($_POST['user']) && $this->model->add_data($_POST)) {
             header('Location:/');
         }
-        $this->view->generate('taskadd_view.php', 'template_view.php', 'Ошибка! Данные не добавлены.');
+
     }
 
 
     function action_update()
     {
 
-        $_POST['task_id'] = (isset($_POST['task_id'][0])) ? $_POST['task_id'][0]: '';
-        $_POST['done'] = (isset($_POST['done'])) ? $_POST['done']: '';
+        $_POST['task_id'] = (isset($_POST['task_id'][0])) ? $_POST['task_id'][0] : '';
+        $_POST['done'] = (isset($_POST['done'])) ? $_POST['done'] : '';
         if (!empty($_POST['task_id'][0]) && $this->model->update_data($_POST)) {
             header('Location:/');
         }

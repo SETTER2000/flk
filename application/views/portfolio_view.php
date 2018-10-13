@@ -1,8 +1,12 @@
 <h1>Портфолио</h1>
+<hr>
 
-<table>
-Все проекты в следующей таблице являются вымышленными, поэтому даже не пытайтесь перейти по приведенным ссылкам.
-<tr><td>Год</td><td>Проект</td><td>Описание</td></tr>
+<div class="alert alert-info" role="alert">Все проекты в следующей таблице являются вымышленными...</div>
+<table class="table table-responsive">
+<header>
+<tr><th>Год</th><th>Проект</th><th>Описание</th></tr>
+</header>
+    <body>
 <?php
 
 	foreach($data as $row)
@@ -11,5 +15,6 @@
 	}
 	
 ?>
+    </body>
 </table>
 

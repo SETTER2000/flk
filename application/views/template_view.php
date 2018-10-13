@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"  ng-app>
+<html lang="en"  ng-app="app" ng-controller="mainCtrl">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,13 +14,14 @@
     <!-- Bootstrap core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/bootstrap-theme.css" rel="stylesheet">
-    <script src="/bower_components/angular/angular.js"></script>
+
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
     <link href="/css/sticky-footer-navbar.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="/js/toastr/angular-toastr.min.css">
     <!-- Custom styles for this template -->
     <link href="/css/jumbotron.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -31,6 +32,8 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+
 </head>
 
 <body>
@@ -54,7 +57,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Задачи <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="/tasks/">Добавить</a></li>
+                        <li><a href="/tasks">Добавить</a></li>
                         <li role="separator" class="divider"></li>
                         <li class="dropdown-header">Nav header</li>
                         <li><a href="/">Список задач</a></li>
@@ -114,10 +117,17 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
+<script src="/node_modules/angular/angular.min.js"></script>
+<script src="/js/toastr/angular-toastr.js" ></script>
+<script src="/js/angular_my.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="/js/jquery.min.js"><\/script>')</script>
 
 <script src="/js/bootstrap.min.js"></script>
+
+
+<script src="/js/my_js.js" ></script>
+
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="/js/ie10-viewport-bug-workaround.js"></script>
 </body>

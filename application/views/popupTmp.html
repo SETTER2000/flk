@@ -1,0 +1,36 @@
+<div id="popUpMsg-bg" ng-show="showPopUpMsg">
+    <div id="popUpMsg">
+        <div class="close" ng-click="closePopUp()">x</div>
+        <div class="content">
+            <h1>Предварительный просмотр</h1>
+            <hr>
+            <table class="table  table-responsive table-bordered">
+                <tr>
+                    <th>Пользователь</th>
+                    <td>{{popUpMsgContent.user}}</td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td>{{popUpMsgContent.email}}</td>
+                </tr>
+                <tr>
+                    <th>Задача</th>
+                    <td>{{popUpMsgContent.description}}</td>
+                </tr>
+                <tr>
+                    <th>Картинка</th>
+                    <td> <img src="" id="myimg2" height="300" alt="Image preview..."> </td>
+                </tr>
+
+
+            </table>
+
+            <!--<ul>-->
+            <!--<li ng-repeat="task in popUpMsgContent">-->
+            <!--{{task.description}} who is {{task.user}}-->
+            <!--</li>-->
+            <!--</ul>-->
+        </div>
+        <button ng-click="closeOKPopUp()">Ok</button>
+    </div>
+</div>
