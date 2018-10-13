@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"  ng-app>
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
@@ -9,10 +9,11 @@
     <meta name="author" content="">
     <link rel="icon" href="/images/favicon.ico">
 
-    <title>Jumbotron Template for Bootstrap</title>
+    <title>Правда Жизни</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap-theme.css" rel="stylesheet">
     <script src="/bower_components/angular/angular.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -54,7 +55,6 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Задачи <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="/tasks/">Добавить</a></li>
-                        <li><a href="/">Удалить</a></li>
                         <li role="separator" class="divider"></li>
                         <li class="dropdown-header">Nav header</li>
                         <li><a href="/">Список задач</a></li>
@@ -64,15 +64,22 @@
                 <li><a href="/portfolio">About</a></li>
                 <li><a href="/contacts">Contact</a></li>
             </ul>
-            <form class="navbar-form navbar-right">
+            <?php if( $_SESSION['admin']!=123){ ?>
+            <form class="navbar-form navbar-right" method="post" action="/login">
                 <div class="form-group">
-                    <input type="text" placeholder="Email" class="form-control">
+                    <input type="text" placeholder="Login" name="login" class="form-control">
                 </div>
                 <div class="form-group">
-                    <input type="password" placeholder="Password" class="form-control">
+                    <input type="password" placeholder="Password"  name="password" class="form-control">
                 </div>
                 <button type="submit" class="btn btn-success">Sign in</button>
             </form>
+            <?php } else{ ?>
+                <form class="navbar-form navbar-right" method="post" action="/admin/logout">
+
+                    <button type="submit" class="btn btn-success">Logout</button>
+                </form>
+            <?php }?>
         </div><!--/.navbar-collapse -->
     </div>
 </nav>

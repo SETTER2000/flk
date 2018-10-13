@@ -1,10 +1,10 @@
 <?php
 
-class Controller_Form extends Controller
+class Controller_Forms extends Controller
 {
     function __construct()
     {
-        $this->model = new Model_Form();
+        $this->model = new Model_Forms();
         $this->view = new View();
     }
 
@@ -12,7 +12,7 @@ class Controller_Form extends Controller
     {
         $data = $this->model->get_data();
 
-        $this->view->generate('forms_view.php', 'template_view.php', $this->data);
+        $this->view->generate('forms_view.php', 'template_view.php', $data);
     }
 
 }

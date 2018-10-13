@@ -5,7 +5,7 @@ class Controller_Admin extends Controller
 	
 	function action_index()
 	{
-		session_start();
+//		session_start();
 		
 		/*
 		Для простоты, в нашем случае, проверяется равенство сессионной переменной admin прописанному
