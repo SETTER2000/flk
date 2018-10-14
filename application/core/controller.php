@@ -24,4 +24,8 @@ class Controller {
 	{
 		// todo
 	}
+	function action_update()
+	{
+		// todo
+	}
 }

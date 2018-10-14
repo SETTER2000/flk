@@ -3,10 +3,10 @@
 
 <div class="alert alert-info" role="alert">Все проекты в следующей таблице являются вымышленными...</div>
 <table class="table table-responsive">
-<header>
+<thead>
 <tr><th>Год</th><th>Проект</th><th>Описание</th></tr>
-</header>
-    <body>
+</thead>
+    <tbody>
 <?php
 
 	foreach($data as $row)
@@ -15,6 +15,5 @@
 	}
 	
 ?>
-    </body>
+    </tbody>
 </table>
-

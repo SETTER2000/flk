@@ -10,35 +10,35 @@
     <schema id="4" parent="1" name="mysql"/>
     <schema id="5" parent="1" name="performance_schema"/>
     <schema id="6" parent="1" name="phpmyadmin"/>
-    <table id="7" parent="2" name="tasks"/>
-    <column id="8" parent="7" name="task_id">
+    <schema id="7" parent="1" name="test"/>
+    <table id="8" parent="2" name="tasks"/>
+    <column id="9" parent="8" name="task_id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="9" parent="7" name="user">
+    <column id="10" parent="8" name="user">
       <Position>2</Position>
       <DataType>varchar(25)|0</DataType>
     </column>
-    <column id="10" parent="7" name="email">
+    <column id="11" parent="8" name="email">
       <Position>3</Position>
       <DataType>varchar(40)|0</DataType>
     </column>
-    <column id="11" parent="7" name="description">
+    <column id="12" parent="8" name="description">
       <Position>4</Position>
       <DataType>varchar(150)|0</DataType>
     </column>
-    <column id="12" parent="7" name="pic">
+    <column id="13" parent="8" name="pic">
       <Position>5</Position>
       <DataType>longtext|0</DataType>
     </column>
-    <column id="13" parent="7" name="done">
+    <column id="14" parent="8" name="done">
       <Position>6</Position>
-      <DataType>set(&apos;on&apos;, &apos;&apos;)|0</DataType>
-      <DefaultExpression>&apos;&apos;</DefaultExpression>
+      <DataType>varchar(2)|0</DataType>
     </column>
-    <key id="14" parent="7" name="PRIMARY">
+    <key id="15" parent="8" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>task_id</ColNames>
       <Primary>1</Primary>

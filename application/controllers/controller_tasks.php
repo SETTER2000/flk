@@ -4,7 +4,6 @@ class Controller_Tasks extends Controller
 {
     private $_supportedFormats = array('image/png', 'image/jpg', 'image/jpeg', 'image/gif');
 
-
     function __construct()
     {
         $this->model = new Model_Tasks();
@@ -18,9 +17,6 @@ class Controller_Tasks extends Controller
 
     function action_add()
     {
-//        print_r($_POST);
-//        exit();
-
         if (empty($_POST['user']) || empty($_POST['description'])) {
             $this->view->generate('taskadd_view.php', 'template_view.php', 'Ошибка! Задача не добавлены.');
             return;
@@ -39,7 +35,7 @@ class Controller_Tasks extends Controller
     function action_update()
     {
 
-        $_POST['task_id'] = (isset($_POST['task_id'][0])) ? $_POST['task_id'][0] : '';
+        $_POST['task_id'] = (isset($_POST['task_id'][0])) ? $_POST['task_id'] : '';
         $_POST['done'] = (isset($_POST['done'])) ? $_POST['done'] : '';
         if (!empty($_POST['task_id'][0]) && $this->model->update_data($_POST)) {
             header('Location:/');
@@ -50,7 +46,6 @@ class Controller_Tasks extends Controller
 
     function upload_file($file)
     {
-
         if (is_array($file) && !empty($file['name'])) {
             if (in_array($file['type'], $this->_supportedFormats)) {
 

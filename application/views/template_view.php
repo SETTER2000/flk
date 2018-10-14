@@ -15,6 +15,8 @@
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/bootstrap-theme.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="/bower_components/tablesorter/themes/blue/style.css">
+    <link rel="stylesheet" href="/bower_components/tablesorter/addons/pager/jquery.tablesorter.pager.css">
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
     <link href="/css/sticky-footer-navbar.css" rel="stylesheet">
@@ -22,6 +24,9 @@
     <!-- Custom styles for this template -->
     <link href="/css/jumbotron.css" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
+<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
+
+
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -117,15 +122,14 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="/node_modules/angular/angular.min.js"></script>
-<script src="/js/toastr/angular-toastr.js" ></script>
-<script src="/js/angular_my.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="/js/jquery.min.js"><\/script>')</script>
-
 <script src="/js/bootstrap.min.js"></script>
+<script src="/bower_components/tablesorter/jquery-latest.js" ></script>
+<script src="/bower_components/tablesorter/jquery.tablesorter.js" ></script>
+<script src="/bower_components/tablesorter/addons/pager/jquery.tablesorter.pager.js" ></script>
 
-
+<script src="/js/angular.min.js"></script>
+<script src="/js/angular_my.js"></script>
 <script src="/js/my_js.js" ></script>
 
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->

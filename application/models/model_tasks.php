@@ -35,10 +35,14 @@ class Model_Tasks extends Model
 //        }
     }
 
+    /**
+     * @param $data
+     * @return mixed
+     */
     public function update_data($data)
     {
 
-        $sql = "UPDATE tasks SET  done=:done WHERE task_id=:task_id";
+        $sql = "UPDATE tasks SET  description=:description, done=:done WHERE task_id=:task_id";
         $stmt = $this->db->prepare($sql);
         return $stmt->execute($data);
 
